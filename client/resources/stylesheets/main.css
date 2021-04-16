@@ -1,0 +1,250 @@
+:root {
+    --main-background-color: #242526;
+    --second-background-color: #18191a;
+    --third-background-color: #3a3b3c;
+    --fourth-background-color: #2E2D2D;
+    --white-color: #e4e6eb;
+    --primary-color: #8f6f9e;
+    --secondary-color: #efc88e;
+    --gray-color: #b0b3b8;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: var(--main-background-color);
+    font-family: Nunito, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    color: white;
+}
+
+.bg-dark {
+    background-color: var(--second-background-color) !important;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+nav {
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+footer {
+    box-shadow: 2px 0 8px 0 rgba(0, 0, 0, 0.2), 4px 0 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: #5a4865;
+    outline: none;
+
+}
+
+.btn-primary:hover {
+    background-color: #5a4865;
+    border-color: #5a4865;
+    outline: none;
+}
+
+.card {
+    background-color: var(--white-color);
+    color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.crop {
+    height: 250px; /* height of container */
+    width: 100%;
+    overflow: hidden;
+}
+
+.crop img {
+    overflow: hidden;
+   /* margin: -1150px 0 0 -700px;*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    /*    margin: -110px 0 0 300px;*/
+}
+
+#app {
+    position: relative;
+    min-height: 100vh;
+}
+
+#page-footer {
+    margin-top: 50px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.form {
+    background-color: var(--second-background-color);
+    color: var(--white-color);
+}
+
+.separator {
+    background-color: var(--primary-color);
+    width: 150px;
+    height: 3px;
+}
+
+.g-recaptcha {
+    display: inline-block;
+}
+
+
+.list-group-item.active {
+    background-color: var(--primary-color) !important;
+    border: 1px solid var(--third-background-color);
+}
+
+.list-group-item {
+    background-color: var(--second-background-color) !important;
+    border: 1px solid var(--third-background-color);
+}
+
+
+hr {
+    background-color: var(--third-background-color);
+    width: 15%;
+    height: 4px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+
+.modal-content {
+    background-color: var(--main-background-color);
+    border: 1px solid var(--third-background-color);
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--third-background-color);
+}
+
+.modal-footer {
+    border-top: 1px solid var(--third-background-color);
+}
+
+.close {
+    color: white;
+}
+
+.close:hover {
+    color: gray;
+}
+
+
+.supprimerAnnonce {
+    float: right;
+}
+
+.modifierAnnonce {
+    float: right;
+    margin-right: 10px;
+}
+
+/**Card Annonce**/
+.item-listeAnnonces {
+    max-width: 1000px;
+    width: 100%;
+
+    margin-bottom: 30px;
+    background-color: var(--second-background-color);
+    color: white;
+}
+
+.infos-annonce {
+
+    width: 100%;
+    padding: 30px;
+    margin-bottom: 30px;
+    background-color: var(--second-background-color);
+    color: white;
+
+}
+
+#info-description {
+    /*
+    width: 100%;
+    padding: 10px;
+     */
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    background-color: var(--fourth-background-color);
+    color: white;
+}
+
+.text-infos-annonce {
+    font-size: 18px;
+}
+
+.fa-tags:before {
+    font-size: 15px;
+}
+
+#alertErreurSucces {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.filtres {
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+
+.thumb-post {
+    object-fit: cover; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+    width: 100%;
+    height: 225px;
+    margin-bottom: 1rem;
+}
+
+#owl-annonce-images .item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+.checkbox, .dn, .up {
+    display: inline-block !important;
+    vertical-align: middle;
+}
+.ui.checkbox input,
+.ui.toggle.checkbox label:before {
+    padding-top: 2px;
+    font-size: xx-small;
+    content: attr(data-content)
+}
+
+.ui.checkbox input,
+.ui.toggle.checkbox label.up:before {
+    padding-left: 8px;
+    color:white;
+}
+
+.ui.checkbox input,
+.ui.toggle.checkbox label.dn:before {
+    padding-left: 24px;
+    color:black;
+}

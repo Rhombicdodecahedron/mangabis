@@ -1,0 +1,79 @@
+<!--
+   But :    Cette page contient le code html pour la page de login. Elle contient un recaptcha.
+   Auteur : Alexis Stella
+   Date :   12.03.2021 / V1.0
+-->
+
+<!DOCTYPE html>
+
+<!-- div "container" qui contient le code de la page -->
+<div class="container">
+
+    <!-- sépare la page en différentes colonnes -->
+    <div class="row">
+
+        <!-- créer une colonne de taille 3 -->
+        <div class="col-lg-3"></div>
+
+        <!-- créer une colonne de taille 6 -->
+        <div class="col-lg-6">
+
+            <!-- créer une carte -->
+            <div class="card form">
+
+                <!-- entête de la carte -->
+                <div class="card-header"><h3><strong>Se connecter</strong></h3></div>
+
+                <!-- corp de la carte -->
+                <div class="card-body">
+
+                    <!-- formulaire de connexion -->
+                    <form action="javascript:actionConnexionUtilisateur()">
+                        <!-- créer un groupe et centre le texte -->
+                        <div class="form-group text-center mb-4">
+                            <img src="resources/svg/icon.svg" alt="logo Mangabis" width="80px"/>
+                            <hr class="separator"/>
+                        </div>
+
+                        <!-- créer un groupe -->
+                        <div class="form-group">
+                            <label for="email">Email</label>
+
+                            <!-- champ texte qui devra contenir l'email de l'utilisateur -->
+                            <input type="text" class="form-control" id="email" aria-describedby="emailHelp"
+                                   placeholder="Email" maxlength="320" required/>
+                        </div>
+
+                        <!-- créer un groupe -->
+                        <div class="form-group mb-4">
+                            <label for="password">Mot de passe</label>
+
+                            <!-- champ texte qui devra contenir le mot de passe de l'utilisateur -->
+                            <input type="password" id="password" class="form-control" placeholder="Mot de passe"
+                                   maxlength="60" required/>
+                        </div>
+
+                        <!-- créer un groupe et centre le texte -->
+                        <div class="form-group text-center">
+
+                            <!-- div qui contient le captcha -->
+                            <div class="g-recaptcha" data-sitekey="6LdzzgAVAAAAAL9EjuFIdB50BKbl4Daw9y2nrnvk"
+                                 data-callback="captchaLogin"></div>
+                        </div>
+
+                        <!-- bouton qui permet de rediriger vers la page d'inscription -->
+                        <a href="register">Vous n'avez pas de compte ? Inscrivez-vous</a>
+                        <br>
+                        <br>
+                        <!-- bouton de validation / connexion -->
+                        <button type="submit" class="btn btn-primary">Connexion
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Script recaptcha v2 -->
+<script src="https://www.google.com/recaptcha/api.js"></script>

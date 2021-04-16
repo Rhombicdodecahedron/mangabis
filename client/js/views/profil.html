@@ -1,0 +1,110 @@
+<!--
+   But :    Cette page contient le code html pour la page de gestion de profil des utilisateurs.
+   Auteur : Alexis Stella
+   Date :   12.03.2021 / V1.0
+-->
+
+<!DOCTYPE html>
+
+<div class="container">
+    <h1>Gestion du profil</h1>
+    <hr/>
+    <!-- sépare la page en différentes colonnes -->
+    <div class="row">
+
+        <!-- créer une colonne de taille 3 -->
+        <div class="col-lg-1"></div>
+
+        <!-- créer une colonne de taille 6 -->
+        <div class="col-lg-10">
+
+            <!-- formulaire de modification de profil utilisateur -->
+            <!--action="javascript:actionInscriptionUtilisateur();"-->
+            <form id="profilModification">
+
+                <!-- créer un groupe -->
+                <div class="form-group row">
+
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <label for="nom">Nom</label>
+
+                        <!-- champ texte qui devra contenir le nom de l'utilisateur -->
+                        <input type="text"
+                               class="form-control"
+                               id="nom"
+                               placeholder="Nom"
+                               maxlength="45"
+                               required
+                        />
+                    </div>
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <label for="nom">Prénom</label>
+
+                        <!-- champ texte qui devra contenir le nom de l'utilisateur -->
+                        <input type="text"
+                               class="form-control"
+                               id="prenom"
+                               placeholder="Prénom"
+                               maxlength="45" required
+                        />
+                    </div>
+                </div>
+
+                <!-- créer un groupe -->
+                <div class="form-group">
+                    <label for="email">Adresse Email</label>
+
+                    <!-- champ texte qui devra contenir l'email de l'utilisateur -->
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                           placeholder="Email" maxlength="320" required/>
+                </div>
+
+                <!-- créer un groupe -->
+                <div class="form-group">
+                    <label for="telephone">Téléphone</label>
+
+                    <!-- champ texte qui devra contenir l'email de l'utilisateur -->
+                    <input type="tel" class="form-control" id="telephone" placeholder="Téléphone" minlength="10"
+                           maxlength="12" required/>
+                </div>
+                <br/>
+                <p class="text-warning"><strong>* Uniquement remplir ces champs en cas de changement de mot de passe !</strong></p>
+                <!-- créer un groupe et sépare en colonne -->
+                <div class="form-group row">
+
+                    <!-- créer une colonne de taille 6-->
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <label for="password">Mot de passe</label>
+
+                        <!-- champ texte qui devra contenir le mot de passe de l'utilisateur -->
+                        <input type="password" class="form-control" id="password" placeholder="Mot de passe"
+                               maxlength="60" />
+                    </div>
+
+                    <!-- créer une colonne de taille 6-->
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <label for="password2">Confirmer le mot de passe</label>
+
+                        <!-- champ texte qui devra contenir la confirmation du mot de passe de l'utilisateur -->
+                        <input type="password" class="form-control" id="password2" placeholder="Mot de passe"
+                               maxlength="60" />
+                    </div>
+                </div>
+
+                <!-- créer un groupe et centre le texte -->
+                <div class="form-group text-center">
+
+                    <!-- div qui contient le captcha -->
+                    <div class="g-recaptcha" data-sitekey="6LdzzgAVAAAAAL9EjuFIdB50BKbl4Daw9y2nrnvk"
+                         data-callback="captchaRegister"></div>
+                </div>
+                <br>
+                <!-- bouton de validation / d'inscription -->
+                <button type="submit" class="ui inverted violet button">Enregistrer</button>
+            </form>
+        </div>
+
+    </div>
+
+</div>
+

@@ -1,0 +1,37 @@
+<!--
+   But :    Cette page contient le code html pour la page contenant la page d'accueil du site.
+   Auteur : Alexis Stella
+   Date :   12.03.2021 / V1.0
+-->
+<!DOCTYPE html>
+<div class='crop'>
+    <img alt="Image page accueil" src="resources/images/banner.jpg"/>
+</div>
+<div class="container">
+    <div class="filtres">
+        <h2>Filtres</h2>
+        <hr/>
+        <div class="row">
+            <div class="col-lg-3">
+                <select class="form-control" id="filtreEtatCombo">
+                    <option value="0">Tout</option>
+                    <option value="1">Neuf</option>
+                    <option value="2">D'occation - comme neuf</option>
+                    <option value="3">D'occation - bon état</option>
+                    <option value="4">D'occation - assez bon état</option>
+                </select>
+                <br/>
+            </div>
+            <div class="col-lg-3">
+                <select class="form-control" id="filtrePrixCombo">
+                    <option value="0">Tout</option>
+                    <option value="1">Prix Croissant</option>
+                    <option value="2">Prix Décroissant</option>
+                    <option value="3">De A - Z</option>
+                    <option value="4">De Z - A</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div id="listeAnnonces" class="row"></div>
+</div>

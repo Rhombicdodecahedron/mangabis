@@ -1,0 +1,125 @@
+<!--
+   But :    Cette page contient le code html pour la page de d'inscription. Elle contient un captcha.
+   Auteur : Alexis Stella
+   Date :   12.03.2021 / V1.0
+-->
+
+<!DOCTYPE html>
+
+<!-- div "container" qui contient le code de la page -->
+<div class="container">
+
+    <!-- sépare la page en différentes colonnes -->
+    <div class="row">
+
+        <!-- créer une colonne de taille 3 -->
+        <div class="col-lg-3"></div>
+
+        <!-- créer une colonne de taille 6 -->
+        <div class="col-lg-6">
+
+            <!-- créer une carte -->
+            <div class="card form">
+
+                <!-- entête de la carte -->
+                <div class="card-header"><h3><strong>Inscription</strong></h3></div>
+
+                <!-- corp de la carte -->
+                <div class="card-body">
+
+                    <!-- formulaire de connexion -->
+                    <form action="javascript:actionInscriptionUtilisateur();">
+
+                        <!-- créer un groupe et centre le texte -->
+
+                        <div class="form-group text-center mb-4">
+                            <img src="resources/svg/icon.svg" alt="logo Mangabis" width="80px"/>
+                            <hr class="separator"/>
+                        </div>
+
+                        <!-- créer un groupe -->
+                        <div class="form-group row">
+
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                <label for="nom">Nom</label>
+
+                                <!-- champ texte qui devra contenir le nom de l'utilisateur -->
+                                <input type="text" class="form-control" id="nom" placeholder="Nom" maxlength="45"
+                                       required/>
+                            </div>
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                <label for="nom">Prénom</label>
+
+                                <!-- champ texte qui devra contenir le nom de l'utilisateur -->
+                                <input type="text" class="form-control" id="prenom" placeholder="Prénom"
+                                       maxlength="45" required/>
+                            </div>
+                        </div>
+
+                        <!-- créer un groupe -->
+                        <div class="form-group">
+                            <label for="email">Adresse Email</label>
+
+                            <!-- champ texte qui devra contenir l'email de l'utilisateur -->
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                                   placeholder="Email" maxlength="320" required/>
+                        </div>
+
+                        <!-- créer un groupe -->
+                        <div class="form-group">
+                            <label for="telephone">Téléphone</label>
+
+                            <!-- champ texte qui devra contenir l'email de l'utilisateur -->
+                            <input type="tel" class="form-control" id="telephone" placeholder="Téléphone" minlength="10"
+                                   maxlength="12" required/>
+                        </div>
+
+                        <!-- créer un groupe et sépare en colonne -->
+                        <div class="form-group row">
+
+                            <!-- créer une colonne de taille 6-->
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                <label for="password">Mot de passe</label>
+
+                                <!-- champ texte qui devra contenir le mot de passe de l'utilisateur -->
+                                <input type="password" class="form-control" id="password" placeholder="Mot de passe"
+                                       maxlength="60" required/>
+                            </div>
+
+                            <!-- créer une colonne de taille 6-->
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                <label for="password2">Confirmer le mot de passe</label>
+
+                                <!-- champ texte qui devra contenir la confirmation du mot de passe de l'utilisateur -->
+                                <input type="password" class="form-control" id="password2" placeholder="Mot de passe"
+                                       maxlength="60" required/>
+                            </div>
+                        </div>
+
+                        <!-- créer un groupe et centre le texte -->
+                        <div class="form-group text-center">
+
+                            <!-- div qui contient le captcha -->
+                            <div class="g-recaptcha" data-sitekey="6LdzzgAVAAAAAL9EjuFIdB50BKbl4Daw9y2nrnvk"
+                                 data-callback="captchaRegister"></div>
+                        </div>
+                        <br>
+
+                        <!-- bouton qui permet de rediriger vers la page de login -->
+                        <a href="login">Vous avez un compte ? Connectez-vous</a>
+                        <br>
+                        <br>
+
+                        <!-- bouton de validation / d'inscription -->
+                        <button type="submit" class="btn btn-primary">
+                            Inscription
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Script recaptcha v2 -->
+<script src="https://www.google.com/recaptcha/api.js"></script>

@@ -1,0 +1,26 @@
+<!--
+   But :    Cette page contient le code html pour la page de gestion de ces annonces.
+   Auteur : Alexis Stella
+   Date :   12.03.2021 / V1.0
+-->
+<!DOCTYPE html>
+<div class="container">
+    <h1>
+        Mes annonces
+        <!-- Button trigger modal -->
+        <button class="ui inverted green button" onclick={openModalAddAnnonce()}><i class="fas fa-plus"></i></button>
+    </h1>
+    <hr/>
+    <div class="row">
+        <div class="col-lg-8 col-centered">
+            <br/>
+            <ul class="list-group">
+                <li class="list-group-item active"><h4>Liste des annonces</h4></li>
+                <div id="listeAnnonces"></div>
+            </ul>
+            <br/><br/>
+        </div>
+        <div class="col-lg-6"></div>
+    </div>
+</div>
+<div id="modals"></div>

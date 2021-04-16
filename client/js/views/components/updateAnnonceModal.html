@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<!-- Modal -->
+<div class="ui tiny basic modal" id="modalUpdateAnnonce">
+
+    <div class="ui icon header">
+        <i class="archive icon"></i>
+        Modifier une annonce
+    </div>
+    <div class="scrolling content">
+        <!-- action="javascript:modifierAnnonces()" -->
+        <form id="modifyModal" enctype="multipart/form-data">
+            <!-- créer un groupe -->
+            <div class="form-group row">
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                    <label for="modifierTitre">Titre</label>
+
+                    <!-- champ texte qui devra contenir le titre de l'annonce -->
+                    <input type="text"
+                           class="form-control"
+                           id="modifierTitre"
+                           aria-describedby="emailHelp"
+                           placeholder="Titre"
+                           maxlength="100" required/>
+                </div>
+                <div class="col-sm-6 mb-3 mb-sm-0">
+
+                    <!-- créer un groupe -->
+                    <div class="form-group mb-4">
+                        <label for="modifierPrix">Prix</label>
+
+                        <!-- champ nombre qui devra contenir le prix de l'annonce -->
+                        <input type="number" id="modifierPrix" class="form-control" placeholder="Prix" required/>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- créer un groupe -->
+            <div class="form-group mb-4">
+                <label for="modifierDescription">Description</label>
+
+                <!-- champ texte qui devra contenir la description de l'annonce -->
+                <textarea id="modifierDescription" class="form-control" maxlength="500" required
+                          placeholder="Description"></textarea>
+            </div>     <!-- créer un groupe -->
+            <div class="form-group mb-4">
+                <label for="modifierEtat">État</label>
+
+                <!-- champ texte qui devra contenir le mot de passe de l'utilisateur -->
+
+                <select class="form-control" id="modifierEtat">
+                    <option value="1">Neuf</option>
+                    <option value="2">D'occation - comme neuf</option>
+                    <option value="3">D'occation - bon état</option>
+                    <option value="3">D'occation - assez bon état</option>
+                </select>
+
+            </div>
+
+            <p>Images déjà existantes : </p>
+            <div class="row" id="imageListModifyAnnonce"></div>
+            <br/>
+            <p>Images rajoutés : </p>
+            <div class="row" id="imageListAddedModifyAnnonce"></div>
+            <br/>
+            <!-- créer un groupe -->
+            <div class="form-group mb-4">
+                <input type="file"
+                       name="images"
+                       id="modifierImages"
+                       hidden
+                       accept="image/x-png,image/gif,image/jpeg"
+                       multiple
+                       class="file"
+                />
+                <label for="browseImagesModifier">Images</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-paperclip"></i></span>
+                    </div>
+                    <input type="text"
+                           class="form-control"
+                           disabled
+                           placeholder="Envoyer des images"
+                           aria-label="Envoyer des images"
+                           aria-describedby="basic-addon1"
+                    />
+                    <div class="input-group-append">
+                        <button class="browse btn btn-primary"
+                                id="browseImagesModifier"
+                                type="button">
+                            <i class="fas fa-search"></i>&nbsp;
+                            Browse
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-danger" type="reset">Rénitialiser</button>
+            <button type="submit" class="btn btn-success">Modifier</button>
+        </form>
+    </div>
+    <div class="actions">
+        <div class="ui red basic cancel inverted button">
+            <i class="remove icon"></i>
+            Annuler
+        </div>
+    </div>
+</div>
